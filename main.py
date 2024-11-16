@@ -1,1 +1,21 @@
-print("hello world")
+# Read frankenstein project First proj
+def main():
+    book_path = "./books/frankenstein.txt"
+    text = get_book_text(book_path)
+    num_words = word_count(text)
+    print(text)
+    print("///")
+    print(f"{num_words} words found in the document")
+
+def word_count(text):
+    words = text.split()
+    return len(words)
+
+def get_book_text(path):
+    with open(path) as f:
+        return f.read()
+        
+main()
+    
+
+
